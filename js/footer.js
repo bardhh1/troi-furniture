@@ -55,6 +55,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                class="text-gray-400 hover:text-primary transition-colors">
                                 <i class="fab fa-tiktok text-xl"></i>
                             </a>
+                            <a href="https://wa.me/38348884220" 
+                               target="_blank" 
+                               class="text-gray-400 hover:text-primary transition-colors">
+                                <i class="fab fa-whatsapp text-xl"></i>
+                            </a>
                         </div>
                         <p class="mt-4 text-gray-400">
                             E Hënë - E Shtunë: 08:00 - 18:00<br>
