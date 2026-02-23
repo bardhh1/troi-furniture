@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - Troi Furniture</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D4AF37',
+                        secondary: '#B8860B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-up.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Delay classes for staggered animations */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+    </style>
+</head>
+<body class="min-h-screen bg-white font-sans">
+    <header id="navbar"></header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[30vh] sm:h-[40vh] md:h-[50vh]">
+        <img src="img/rajana.jpg" alt="Gallery" class="absolute inset-0 w-full h-full object-cover brightness-50">
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white px-4">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-center">Galeria Jonë</h1>
+            <p class="text-base sm:text-lg md:text-xl text-center">Shikoni punët tona më të fundit</p>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-12 sm:py-16 md:py-20">
+        <div class="container mx-auto px-4">
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition-colors" data-filter="all">
+                    Të Gjitha
+                </button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-primary hover:text-white transition-colors" data-filter="kuzhina">
+                    Kuzhina
+                </button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-primary hover:text-white transition-colors" data-filter="garderoba">
+                    Garderoba
+                </button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-primary hover:text-white transition-colors" data-filter="tv">
+                    Mobilie për TV
+                </button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-primary hover:text-white transition-colors" data-filter="dhoma">
+                    Dhoma Gjumi
+                </button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
+                <!-- Images will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50">
+        <button id="lightbox-close" class="absolute top-4 right-4 text-white text-4xl hover:text-primary transition-colors">
+            <i class="fas fa-times"></i>
+        </button>
+        <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white text-4xl hover:text-primary transition-colors">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-4xl hover:text-primary transition-colors">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <img id="lightbox-img" class="max-h-[90vh] max-w-[90vw] object-contain" src="" alt="">
+    </div>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html> 

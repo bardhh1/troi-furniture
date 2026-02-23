@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troi Furniture</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D4AF37',
+                        secondary: '#B8860B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-up.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Delay classes for staggered animations */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+    </style>
+</head>
+<body class="min-h-screen bg-white font-sans">
+    <header id="navbar"></header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen">
+        <img src="img/bg.jpg" alt="Luxurious interior" class="absolute inset-0 w-full h-full object-cover brightness-50">
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white fade-up">
+            <img src="img/logo_no_bg_tiny.png" alt="Troi Furniture Logo" class="mb-8 w-48">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center">Troi Furniture</h1>
+            <p class="text-lg md:text-xl mb-8 text-center">Përmirësoni Hapësirën Tuaj të Jetesës me Elegancë të Përjetshme</p>
+            <a href="galeria.html" class="bg-primary text-white hover:bg-secondary text-lg px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105">
+                Puna Jonë!
+            </a>
+        </div>
+    </section>
+
+    <!-- Specialitetet Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-up">Specialitetet Tona</h2>
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="fade-up delay-100 bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-primary rounded-full mb-4 mx-auto flex items-center justify-center">
+                        <i class="fas fa-utensils text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center">Kuzhina</h3>
+                </div>
+                <div class="fade-up delay-200 bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-primary rounded-full mb-4 mx-auto flex items-center justify-center">
+                        <i class="fas fa-door-closed text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center">Garderoba</h3>
+                </div>
+                <div class="fade-up delay-300 bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-primary rounded-full mb-4 mx-auto flex items-center justify-center">
+                        <i class="fas fa-tv text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center">Mobilie për TV</h3>
+                </div>
+                <div class="fade-up delay-400 bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-primary rounded-full mb-4 mx-auto flex items-center justify-center">
+                        <i class="fas fa-bed text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center">Dhoma Gjumi</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Slider Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-up">Projektet Tona të Kaluara</h2>
+            <div class="max-w-4xl mx-auto">
+                <div id="imageSlider" class="relative w-full h-[500px] overflow-hidden rounded-lg fade-up">
+                    <!-- Image slides will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0 fade-up">
+                <img src="img/puna3.png" alt="About Troi Furniture" class="rounded-lg shadow-2xl w-full">
+            </div>
+            <div class="md:w-1/2 md:pl-12 fade-up delay-200">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Rreth Troi Furniture</h2>
+                <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                    Në Troi Furniture, ne kombinojmë dizajnin modern me elegancën e përjetshme. Pasioni ynë për mjeshtëri dhe vëmendja ndaj detajeve siguron që çdo pjesë që krijojmë nuk është thjesht mobilje, por një vepër arti që transformon hapësirën tuaj të jetesës.
+                </p>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Product Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-up">Produkt i Veçantë</h2>
+            <div class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow-2xl overflow-hidden fade-up delay-200">
+                <div class="md:w-1/2">
+                    <img src="img/rajana.jpg" alt="Featured Product" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-1/2 p-8">
+                    <h3 class="text-2xl md:text-3xl font-semibold mb-4">Dhomë Gjumi Moderne!</h3>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        Transformoni hapësirën tuaj të pushimit me dhomën tonë moderne të gjumit. Ky set i plotë përfshin krevatin elegant, dollapët funksionalë dhe detajet luksoze, duke krijuar një ambient të rehatshëm që kombinon stilin bashkëkohor me komoditetin maksimal.
+                    </p>
+                    <a href="galeria.html" class="inline-block bg-primary text-white hover:bg-secondary text-lg px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105">
+                        Shiko Detajet
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    
+
+    <!-- Design Process Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-up">Procesi Ynë i Dizajnit</h2>
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center fade-up delay-100">
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-white text-3xl font-bold mb-4 shadow-lg">
+                        1
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-2">Konsultimi</h3>
+                    <p class="text-center text-gray-600 text-lg">
+                        Ne dëgjojmë nevojat dhe preferencat tuaja.
+                    </p>
+                </div>
+                <div class="flex flex-col items-center fade-up delay-200">
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-white text-3xl font-bold mb-4 shadow-lg">
+                        2
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-2">Koncepti</h3>
+                    <p class="text-center text-gray-600 text-lg">
+                        Dizajnerët tanë krijojnë koncepte të personalizuara.
+                    </p>
+                </div>
+                <div class="flex flex-col items-center fade-up delay-300">
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-white text-3xl font-bold mb-4 shadow-lg">
+                        3
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-2">Krijimi</h3>
+                    <p class="text-center text-gray-600 text-lg">
+                        Mjeshtrat tanë i japin jetë dizajneve.
+                    </p>
+                </div>
+                <div class="flex flex-col items-center fade-up delay-400">
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-white text-3xl font-bold mb-4 shadow-lg">
+                        4
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-2">Dorëzimi</h3>
+                    <p class="text-center text-gray-600 text-lg">
+                        Ne dorëzojmë dhe instalojmë mobiliet tuaja të reja.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 text-center fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Transformoni Hapësirën Tuaj Sot</h2>
+            <p class="mb-8 text-xl">
+                Gati për të përmirësuar shtëpinë tuaj me Troi Furniture? Na kontaktoni për një konsultim të personalizuar.
+            </p>
+            <a href="contact.html" class="inline-block bg-white text-primary hover:bg-gray-200 text-lg px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105">
+                Filloni Tani <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-up">Pse të Zgjidhni Troi Furniture</h2>
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 fade-up delay-100">
+                    <div class="flex flex-col items-center text-center">
+                        <i class="fas fa-shield-alt text-primary text-4xl mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Cilësi Premium</h3>
+                        <p class="text-gray-600">
+                            Ne sigurojmë standardet më të larta në çdo aspekt të prodhimit të mobiljeve.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 fade-up delay-200">
+                    <div class="flex flex-col items-center text-center">
+                        <i class="fas fa-bolt text-primary text-4xl mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Mjeshtëri Eksperte</h3>
+                        <p class="text-gray-600">
+                            Mjeshtrat tanë të aftë sjellin vite përvojë në çdo pjesë që krijojnë.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 fade-up delay-300">
+                    <div class="flex flex-col items-center text-center">
+                        <i class="fas fa-check-circle text-primary text-4xl mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Dizajne të Personalizuara</h3>
+                        <p class="text-gray-600">
+                            Ne ofrojmë zgjidhje të personalizuara që përshtaten me stilin dhe nevojat tuaja unike.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 fade-up delay-100">
+                    <div class="flex flex-col items-center text-center">
+                        <i class="fas fa-clock text-primary text-4xl mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Dorëzim me Kohë</h3>
+                        <p class="text-gray-600">
+                            Ne respektojmë kohën tuaj dhe sigurojmë dorëzimin me kohë të mobiljeve tuaja.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 fade-up delay-200">
+                    <div class="flex flex-col items-center text-center">
+                        <i class="fas fa-star text-primary text-4xl mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Shërbim i Shkëlqyer</h3>
+                        <p class="text-gray-600">
+                            Ekipi ynë i shërbimit ndaj klientit është i përkushtuar për të siguruar kënaqësinë tuaj të plotë.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 fade-up delay-300">
+                    <div class="flex flex-col items-center text-center">
+                        <i class="fas fa-shield-alt text-primary text-4xl mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Garanci 5 Vjeqare</h3>
+                        <p class="text-gray-600">
+                            Ne qëndrojmë pas produkteve tona me një garanci gjithëpërfshirëse 5 vjeqare.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/38348884220" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="fixed bottom-4 right-4 bg-primary text-white rounded-full p-4 shadow-lg hover:bg-secondary transition-colors">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/imageSlider.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
