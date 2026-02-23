@@ -42,15 +42,15 @@ export default function Footer() {
             <p className="footer-col-title">Kontakti</p>
             <div className="footer-contact-item">
               <MapPin size={14} />
-              <span>Peja, Kosovë</span>
+              <span>Ferizaj, Kosovë</span>
             </div>
             <div className="footer-contact-item">
               <Phone size={14} />
-              <span>+383 48 884 220</span>
+              <span>+383 48 884 220 / +383 44 259 373</span>
             </div>
             <div className="footer-contact-item">
               <Mail size={14} />
-              <span>info@troifurniture.com</span>
+              <span>troifurniture@gmail.com</span>
             </div>
           </div>
         </div>
