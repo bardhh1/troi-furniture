@@ -40,7 +40,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Adresa',
-    value: 'Kosovë',
+    value: 'Agim Ramadani, Ferizaj, Kosovë',
     href: null,
   },
   {

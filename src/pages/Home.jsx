@@ -62,10 +62,7 @@ export default function Home() {
           <img src="/img/bg.jpg" alt="Luxury interior" />
         </div>
         <div className="container hero-content">
-          <div className="hero-badge">
-            <Star size={11} fill="currentColor" />
-            Furniture &amp; Interior Design
-          </div>
+          
           <h1 className="hero-title fade-up">
             Elegancë e <span className="gold-text">Përjetshme</span> për Shtëpinë Tuaj
           </h1>
@@ -81,10 +78,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="hero-scroll">
-          <div className="scroll-line" />
-          <span>Scroll</span>
-        </div>
+        
       </section>
 
       {/* SPECIALTIES */}

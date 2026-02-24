@@ -31,7 +31,6 @@ export default function Navbar() {
           <div className="navbar-inner">
             <NavLink to="/" className="navbar-logo">
               <img src="/img/logo_no_bg_tiny.png" alt="Troi Furniture" />
-              <span className="navbar-logo-text">Troi Furniture</span>
             </NavLink>
 
             <ul className="navbar-links">
