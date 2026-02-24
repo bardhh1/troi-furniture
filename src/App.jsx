@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Gallery from './pages/Gallery';
+import Contact from './pages/Contact';
 
 /* WhatsApp floating button */
 function WAFloat() {
@@ -29,6 +30,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
       <WAFloat />
