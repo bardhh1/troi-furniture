@@ -28,20 +28,20 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Telefon',
-    value: '+383 48 884 220',
+    value: '+383 48 884 220 / +383 45 259 373',
     href: 'tel:+38348884220',
   },
   {
     icon: MessageCircle,
     title: 'WhatsApp',
-    value: '+383 48 884 220',
+    value: '+383 48 884 220 / +383 45 259 373',
     href: 'https://wa.me/38348884220',
   },
   {
     icon: MapPin,
     title: 'Adresa',
     value: 'Agim Ramadani, Ferizaj, Kosovë',
-    href: null,
+    href: 'https://maps.app.goo.gl/xc8qwDexQEGodsi78',
   },
   {
     icon: Clock,

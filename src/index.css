@@ -1096,6 +1096,13 @@ a {
 @media (max-width: 768px) {
   .navbar-links, .navbar-actions .btn { display: none; }
   .navbar-hamburger { display: flex; }
+  .hero-content {
+    padding: 7.5rem 1rem 4.5rem;
+  }
+  .hero-title,
+  .hero-subtitle {
+    max-width: 100%;
+  }
   .specialties-grid { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
   .why-grid { grid-template-columns: 1fr; }
@@ -1103,6 +1110,17 @@ a {
 }
 
 @media (max-width: 480px) {
+  .hero-content {
+    padding: 7rem 1.25rem 4rem;
+  }
+  .hero-title {
+    font-size: clamp(2.35rem, 11vw, 3.25rem);
+    line-height: 1.08;
+  }
+  .hero-subtitle {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
   .specialties-grid { grid-template-columns: 1fr; }
   .process-steps { grid-template-columns: 1fr; }
   .about-stats { flex-direction: column; gap: 1.5rem; }
