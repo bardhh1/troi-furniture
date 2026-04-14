@@ -267,7 +267,7 @@ a {
 .mobile-nav {
   position: fixed;
   inset: 0;
-  z-index: 999;
+  z-index: 1100;
   background: var(--color-bg);
   display: flex;
   flex-direction: column;
@@ -1097,7 +1097,9 @@ a {
   .navbar-links, .navbar-actions .btn { display: none; }
   .navbar-hamburger { display: flex; }
   .hero-content {
-    padding: 7.5rem 1rem 4.5rem;
+    padding: 7.5rem 1.5rem 4.5rem;
+    width: min(100%, 36rem);
+    margin: 0;
   }
   .hero-title,
   .hero-subtitle {
@@ -1111,15 +1113,25 @@ a {
 
 @media (max-width: 480px) {
   .hero-content {
-    padding: 7rem 1.25rem 4rem;
+    padding: 7rem 1.75rem 4rem;
+    width: min(100%, 28rem);
   }
   .hero-title {
     font-size: clamp(2.35rem, 11vw, 3.25rem);
     line-height: 1.08;
+    margin-bottom: 1.25rem;
   }
   .hero-subtitle {
     font-size: 0.98rem;
     line-height: 1.75;
+    margin-bottom: 2rem;
+  }
+  .hero-actions {
+    width: 100%;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
   }
   .specialties-grid { grid-template-columns: 1fr; }
   .process-steps { grid-template-columns: 1fr; }

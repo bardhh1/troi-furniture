@@ -18,6 +18,17 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
 
+  useEffect(() => {
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setMobileOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, []);
+
   const links = [
     { to: '/', label: 'Home' },
     { to: '/gallery', label: 'Gallery' },
@@ -53,10 +64,12 @@ export default function Navbar() {
               </a>
               <button
                 className="navbar-hamburger"
-                onClick={() => setMobileOpen(true)}
-                aria-label="Open menu"
+                onClick={() => setMobileOpen((open) => !open)}
+                aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+                aria-expanded={mobileOpen}
+                aria-controls="mobile-navigation"
               >
-                <Menu size={22} color="var(--color-text)" />
+                {mobileOpen ? <X size={22} color="var(--color-text)" /> : <Menu size={22} color="var(--color-text)" />}
               </button>
             </div>
           </div>
@@ -64,7 +77,11 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Nav */}
-      <div className={`mobile-nav ${mobileOpen ? 'open' : ''}`}>
+      <div
+        id="mobile-navigation"
+        className={`mobile-nav ${mobileOpen ? 'open' : ''}`}
+        onClick={() => setMobileOpen(false)}
+      >
         <button
           className="lightbox-close"
           style={{ position: 'absolute', top: '1.5rem', right: '1.5rem' }}
